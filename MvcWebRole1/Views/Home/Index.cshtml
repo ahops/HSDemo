@@ -1,0 +1,40 @@
+﻿<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Welcome to Headspring Employee Management Demo v0.01</h1>
+            </hgroup>
+            
+            <p>
+                You must login to before using this site.
+            </p>
+        </div>
+    </section>
+    <section id="authNode" class="content-wrapper main-content clear-fix">
+        <nav data-bind="visible: !IsAuthenticated">
+            <h3>Please enter your username and password:</h3>
+            <ol class="round">
+                <li class="one">
+                    <h5>Username</h5>
+                    <input name="username" type="text" data-bind="value: Name" />
+                </li>
+
+                <li class="two">
+                    <h5>Password</h5>
+                    <input name="password" type="password" data-bind="value: Password" />
+                </li>
+            
+
+                <li class="three">
+                    <input name="submit" type="button" value="Login" data-bind="click: login" />
+                </li>
+            </ol>
+        </nav>
+        <nav data-bind="visible: IsAuthenticated">
+            <h3>Welcome back, <span data-bind="text: Name" /></h3>
+        </nav>
+    </section>
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/ko")
+@Scripts.Render("~/bundles/hsAuth")

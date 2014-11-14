@@ -1,0 +1,1 @@
+﻿SELECT * FROM dbo.Employee WHERE Id = @Id;

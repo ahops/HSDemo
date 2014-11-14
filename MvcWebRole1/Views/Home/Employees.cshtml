@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Employees";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <div id="displayNode">@Html.Partial("EmployeeSearch")</div>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <div id="createNode">@Html.Partial("EmployeeCreate")</div>
+    </section>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/ko")
+@Scripts.Render("~/bundles/hs")
